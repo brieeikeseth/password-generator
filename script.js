@@ -1,11 +1,15 @@
 // Assignment code here
+confirmRange();
 
 var passwordLength;
 var confirmLower;
 var confirmUpper;
-var confirmNumber;
+var confirmNumbers;
 var confirmSpecial;
-var userChoices;
+
+function confirmRange (){
+
+}
 
 
 // Get references to the #generate element
@@ -22,3 +26,8 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+// Start pw generator 
+function generatePassword() {
+    // Ask user for 
+}
