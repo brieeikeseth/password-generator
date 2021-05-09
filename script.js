@@ -31,5 +31,15 @@ generateBtn.addEventListener("click", writePassword);
 
 // Start pw generator 
 function generatePassword() {
-    // Ask user for 
+    // Ask user for desired length of password 
+    passwordLength = prompt ("How many characters would you like your password? Please choose between 8-12 characters");
+
+    if(!passwordLength) {
+        alert("Required Value");
+
+    }else if (passwordLength < 8 || passwordLength > 128) {
+        passwordLength = prompt ("You must choose between 8-128 characters")
+        console.log("Password Length " + passwordLength);
+    }
+
 }
