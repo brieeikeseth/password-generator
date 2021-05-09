@@ -1,5 +1,12 @@
 // Assignment code here
 
+var passwordLength;
+var confirmLower;
+var confirmUpper;
+var confirmNumber;
+var confirmSpecial;
+var userChoices;
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
