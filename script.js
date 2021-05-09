@@ -1,19 +1,21 @@
 // Assignment code here
-confirmRange();
 
 var passwordLength;
 var confirmLower;
 var confirmUpper;
 var confirmNumbers;
 var confirmSpecial;
-
-function confirmRange (){
-
-}
+var userChoices;
 
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
+
+var lower = ["abcdefghijklmnopqrstuvwxyz"];
+var upper = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+var numbers = ["0123456789"];
+var special = ["!@#$%^&*()-_=+;:',<.>/?"];
+
 
 // Write password to the #password input
 function writePassword() {
