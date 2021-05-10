@@ -26,8 +26,8 @@ WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 
 # Repository Link
-professional-portfolio was uploaded to [Github] (https://github.com/) at the following repository:
-https://github.com/brieeikeseth/professional-portfolio
+
+https://github.com/brieeikeseth/password-generator
 
 # Website Link
 https://brieeikeseth.github.io/password-generator/
