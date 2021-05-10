@@ -119,9 +119,18 @@ if (!confirmLower && !confirmUpper && !confirmNumbers && !confirmSpecial) {
     console.log(userChoices);
   };
 
+ // password length empty input
+ var passwordBlank = [];
+
 //  random selection loop
    for (var i = 0; i < passwordLength; i++) {
      var allChoices = userChoices[Math.floor(Math.random() * userChoices.length)];
      passwordBlank.push(allChoices);
      console.log(allChoices);
    }
+
+    // password given 
+    var password = passwordBlank.join("");
+    console.log("Your Pasword is: " + password);
+    return password;
+}
