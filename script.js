@@ -31,8 +31,8 @@ generateBtn.addEventListener("click", writePassword);
 
 // Start pw generator 
 function generatePassword() {
-    // Ask user for desired length of password 
-    passwordLength = prompt ("How many characters would you like your password? Please choose between 8-12 characters");
+// Ask user for desired length of password 
+passwordLength = prompt ("How many characters would you like your password? Please choose between 8-12 characters");
 
     if(!passwordLength) {
         alert("Required Value");
@@ -40,24 +40,24 @@ function generatePassword() {
     }else if (passwordLength < 8 || passwordLength > 128) {
         passwordLength = prompt ("You must choose between 8-128 characters")
         console.log("Password Length " + passwordLength);
-    } else { 
-        confirmLower = confirm("Will this contain lower case letters?");
-        console.log("Lower case " + confirmLower);
-        confirmUpper = confirm("Will this contain upper case letters?");
-        console.log("Upper case " + confirmUpper);
-        confirmNumber = confirm("Will this contain numbers?");
-        console.log("Number " + confirmNumber);
-        confirmSpecial = confirm("Will this contain special characters?");
-        console.log("Special Character " + confirmSpecial);
+     } else { 
+    confirmLower = confirm("Will this contain lower case letters?");
+    console.log("Lower case " + confirmLower);
+    confirmUpper = confirm("Will this contain upper case letters?");
+    console.log("Upper case " + confirmUpper);
+    confirmNumbers = confirm("Will this contain numbers?");
+    console.log("Numbers " + confirmNumbers);
+    confirmSpecial = confirm("Will this contain special characters?");
+    console.log("Special Character " + confirmSpecial);
     
       };
 
- // input left blank then 
-    if (!confirmLower && !confirmUpper && !confirmNumber && !confirmSpecial) {
+// input left blank 
+if (!confirmLower && !confirmUpper && !confirmNumbers && !confirmSpecial) {
     userChoices = alert("You must choose a criteria to continue");
  
-    //  true option 1 (4 options)
-  } else if (confirmLower && confirmUpper && confirmNumber && confirmSpecial) {
+ //  true option 1 (4 options)
+} else if (confirmLower && confirmUpper && confirmNumbers && confirmSpecial) {
     userChoices = lower.concat(upper, numbers, special);
     console.log(userChoices);
   }
@@ -67,12 +67,12 @@ function generatePassword() {
     userChoices = lower.concat(upper, special);
     console.log(userChoices);
   }
-  else if (confirmLower && confirmNumber && confirmSpecial) {
+  else if (confirmLower && confirmNumbers && confirmSpecial) {
     userChoices = lower.concat(numbers, special);
     console.log(userChoices);
   }
   
-  else if (confirmUpper && confirmNumber && confirmSpecial) {
+  else if (confirmUpper && confirmNumbers && confirmSpecial) {
     userChoices = upper.concat(numbers, special);
     console.log(userChoices);
   }
@@ -81,7 +81,7 @@ function generatePassword() {
     userChoices = lower.concat(upper);
     console.log(userChoices);
   }
-  else if (confirmLower && confirmNumber) {
+  else if (confirmLower && confirmNumbers) {
     userChoices = lower.concat(numbers);
     console.log(userChoices);
   }
@@ -89,7 +89,7 @@ function generatePassword() {
     userChoices = lower.concat(special);
     console.log(userChoices);
   }
-  else if (confirmUpper && confirmNumber) {
+  else if (confirmUpper && confirmNumbers) {
     userChoices = upper.concat(numbers);
     console.log(userChoices);
   }
@@ -97,7 +97,7 @@ function generatePassword() {
     userChoices = upper.concat(special);
     console.log(userChoices);
   }
-  else if (confirmNumber && confirmSpecial) {
+  else if (confirmNumbers && confirmSpecial) {
     userChoices = numbers.concat(special);
     console.log(userChoices);
   }
@@ -110,7 +110,7 @@ function generatePassword() {
     userChoices = blankUpper.concat(upper);
     console.log(userChoices);
   }
-  else if (confirmNumber) {
+  else if (confirmNumbers) {
     userChoices = numbers;
     console.log(userChoices);
   }
@@ -119,4 +119,9 @@ function generatePassword() {
     console.log(userChoices);
   };
 
-}
+//  random selection loop
+   for (var i = 0; i < passwordLength; i++) {
+     var allChoices = userChoices[Math.floor(Math.random() * userChoices.length)];
+     passwordBlank.push(allChoices);
+     console.log(allChoices);
+   }
