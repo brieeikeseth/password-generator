@@ -1,14 +1,14 @@
-##password-generator
+#password-generator
 
-##Description
+#Description
 This application is used to generate new password with different characters each time it's generated. 
 
-##User Story
+#User Story
 AS AN employee with access to sensitive data
 I WANT to randomly generate a password that meets certain criteria
 SO THAT I can create a strong password that provides greater security
 
-##Acceptance Criteria
+#Acceptance Criteria
 GIVEN I need a new, secure password
 WHEN I click the button to generate a password
 THEN I am presented with a series of prompts for password criteria
@@ -25,9 +25,9 @@ THEN a password is generated that matches the selected criteria
 WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 
-##Repository Link
+#Repository Link
 professional-portfolio was uploaded to [Github] (https://github.com/) at the following repository:
 https://github.com/brieeikeseth/professional-portfolio
 
-##Website Link
+#Website Link
 https://brieeikeseth.github.io/password-generator/
